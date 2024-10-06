@@ -1,4 +1,4 @@
-import note from '../../assets/note.png'
+import note from '../assets/note.png'
 export default function Logo() {
 	return (
 		<>
