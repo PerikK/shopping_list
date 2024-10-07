@@ -8,10 +8,12 @@ export default function App() {
 
   return (
     <>
-      <Logo />
-      <Form />
-      <List />
-      <Stats /> 
+      <div className='display grid grid-rows-[1fr_1fr_5fr_2fr] min-w-screen min-h-screen  place-items-center my-0 py-0'>
+        <Logo />
+        <Form />
+        <List />
+        <Stats /> 
+      </div>
     </>
   )
 }

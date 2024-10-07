@@ -2,7 +2,7 @@ export default function Item({item}) {
     return (
         <>
             <li>
-                <span>
+                <span style={{textDecoration: item.inCart ? "line-through" : "none"}}>
                     {item.qty} {item.name}
                 </span>
                 <button>❌</button>
