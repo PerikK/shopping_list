@@ -6,6 +6,12 @@ export default function Form() {
 
     function handleSubmit(e) {
         e.preventDefault()
+        
+        if(!itemName) return
+        const newItem = { id: Date.now(), itemName: itemName, qty, inCart: false }
+
+        setItemName('')
+        setQty(1)
     }
 
     return (
