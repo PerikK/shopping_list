@@ -1,6 +1,6 @@
 import Item from './Item'
 
-export default function List({ items, onDeleteItem }) {
+export default function List({ items, onDeleteItem, onToggleInCart }) {
 	return (
 		<div>
 			<ul>
@@ -9,6 +9,7 @@ export default function List({ items, onDeleteItem }) {
 						key={item.id}
 						item={item}
 						onDeleteItem={onDeleteItem}
+						onToggleInCart={onToggleInCart}
 					/>
 				))}
 			</ul>
