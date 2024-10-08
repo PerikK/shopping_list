@@ -1,12 +1,7 @@
 import { useState } from 'react'
 import Item from './Item'
-import Sorting from './Sorting'
 
-export default function List({
-	items,
-	onDeleteItem,
-	onToggleInCart,
-}) {
+export default function List({ items, onDeleteItem, onToggleInCart, onClearList }) {
 	const [sortBy, setSortBy] = useState('input')
 
 	let sortedItems = []
@@ -16,11 +11,11 @@ export default function List({
 	}
 
 	if (sortBy === 'name') {
-		sortedItems = items.slice().sort((a, b) =>
-			a.itemName.localeCompare(b.itemName)
-		)
-    }
-    if (sortBy === 'inCartStatus') {
+		sortedItems = items
+			.slice()
+			.sort((a, b) => a.itemName.localeCompare(b.itemName))
+	}
+	if (sortBy === 'inCartStatus') {
 		sortedItems = items
 			.filter((item) => !item.inCart)
 			.concat(items.filter((item) => item.inCart))
@@ -45,8 +40,8 @@ export default function List({
 				<option value='input'>Sort by input order</option>
 				<option value='name'>Sort by name</option>
 				<option value='inCartStatus'>Sort by in cart status</option>
-            </select>
-            <button>Clear list</button>
+			</select>
+			<button onClick={onClearList}>Clear list</button>
 		</div>
 	)
 }

@@ -22,7 +22,12 @@ export default function App() {
 				item.id === id ? { ...item, inCart: !item.inCart } : item
 			)
 		)
-	}
+  }
+  
+  const handleClearList = () => {
+    alert('Are you sure you want to clear your list?')
+    setItems([])
+  }
 
 	return (
 		<>
@@ -32,7 +37,8 @@ export default function App() {
 				<List
 					items={items}
 					onDeleteItem={handleDeleteItem}
-					onToggleInCart={handleToggleInCart}
+          onToggleInCart={handleToggleInCart}
+          onClearList={handleClearList}
 				/>
 				<Stats items={items} />
 			</div>
