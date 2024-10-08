@@ -34,7 +34,7 @@ export default function App() {
 					onDeleteItem={handleDeleteItem}
 					onToggleInCart={handleToggleInCart}
 				/>
-				<Stats />
+				<Stats items={items} />
 			</div>
 		</>
 	)
