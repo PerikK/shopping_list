@@ -1,18 +1,22 @@
 import { useState } from 'react'
 
-export default function Form() {
+export default function Form({onAddItems}) {
     const [itemName, setItemName] = useState('')
     const [qty, setQty] = useState(1)
+    
 
-    function handleSubmit(e) {
-        e.preventDefault()
+    const handleSubmit =(e) => {
+        e.preventDefault()        
+        if (!itemName) return
         
-        if(!itemName) return
-        const newItem = { id: Date.now(), itemName: itemName, qty, inCart: false }
+        const newItem = { id: Date.now(), itemName, qty, inCart: false }
+
+        onAddItems(newItem)         
 
         setItemName('')
         setQty(1)
     }
+
 
     return (
         <>
