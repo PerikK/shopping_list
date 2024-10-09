@@ -40,7 +40,7 @@ export default function App() {
 
 	return (
 		<>
-			<div className='display grid grid-rows-[1fr_1fr_5fr_2fr]  min-h-screen bg-[#1e1f2b] place-items-center my-0 py-3 '>
+			<div className='display grid grid-rows-[1fr_1fr_5fr_2fr] w-full min-h-screen bg-[#1e1f2b] place-items-center my-0 py-3 '>
 				<Logo />
 				<Form onAddItems={handleAddItems} />
 				<List

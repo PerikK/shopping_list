@@ -33,7 +33,7 @@ export default function List({
 	return (
 		<>
 			<div>
-				<ul className='grid grid-cols-2 gap-3 min-h-60 overflow-y-auto w-full mx-12'>
+				<ul className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 min-h-60 gap-2 overflow-y-auto w-full mx-8'>
 					{sortedItems?.map((item) => (
 						<Item
 							key={item.id}
@@ -45,7 +45,7 @@ export default function List({
 				</ul>
 			</div>
 			<Stats items={items} />
-			<div className='w-4/12 flex justify-around rounded-2xl bg-opacity-60 p-2.5 mb-8 bg-slate-400 shadow-lg shadow-indigo-500/50'>
+			<div className='w:9/12  md:w-6/12 flex justify-around rounded-2xl bg-opacity-60 p-2.5 mb-8 bg-slate-400 shadow-lg shadow-indigo-500/50'>
 				<select
 					value={sortBy}
 					onChange={(e) => setSortBy(e.target.value)}
