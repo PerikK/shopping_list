@@ -1,12 +1,10 @@
 export default function Item({ item, onDeleteItem, onToggleInCart }) {
+
 	return (
 		<>
 			<li className=''>
 				<span
-					style={{
-						textDecoration: item.inCart ? 'line-through' : 'none',
-					}}
-					className='text-2xl mr-4'
+					className={`text-2xl mr-4 ${item.inCart ? 'line-through decoration-red-500 text-slate-500' : ''}`}
 				>
 					{item.qty}. {item.itemName}
 				</span>
