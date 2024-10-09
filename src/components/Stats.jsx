@@ -1,7 +1,7 @@
 export default function Stats({ items }) {
 
 	const numItems = items.length
-    const itemsInCart = items.filter((item) => item.inCart).length
+    const itemsInCart = items?.filter((item) => item.inCart).length
     
 
 	if (!items.length) {
