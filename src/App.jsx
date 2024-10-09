@@ -5,11 +5,16 @@ import List from './components/List.jsx'
 import { useState } from 'react'
 
 export default function App() {
-	const [items, setItems] = useState([])
+  const [items, setItems] = useState(
+		JSON.parse(localStorage.getItem('listItems')))
+	
+  
+  console.log(items);
 
 	const handleAddItems = (item) => {
 		setItems((items) => [...items, item])
-	}
+  }
+  
 
   const handleDeleteItem = (id) => {
     const confirmed = window.confirm(
@@ -34,7 +39,10 @@ export default function App() {
 		)
 
 		if (confirmed) setItems([])
-	}
+  }
+  
+  
+  
 
 	return (
 		<>

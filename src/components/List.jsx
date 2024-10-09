@@ -8,7 +8,8 @@ export default function List({
 	onToggleInCart,
 	onClearList,
 }) {
-	const [sortBy, setSortBy] = useState('input')
+    const [sortBy, setSortBy] = useState('input')
+    
 
 	let sortedItems = []
 
@@ -25,7 +26,9 @@ export default function List({
 		sortedItems = items
 			.filter((item) => !item.inCart)
 			.concat(items.filter((item) => item.inCart))
-	}
+    }
+    localStorage.setItem('listItems', JSON.stringify(items))  
+    
 
 	return (
 		<>
