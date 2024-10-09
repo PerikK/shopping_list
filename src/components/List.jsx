@@ -33,7 +33,7 @@ export default function List({
 	return (
 		<>
 			<div>
-				<ul className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 min-h-60 gap-2 overflow-y-auto w-full mx-8'>
+				<ul className='grid xs:grid-cols-1 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 min-h-60 gap-2 overflow-y-auto w-full mx-8'>
 					{sortedItems?.map((item) => (
 						<Item
 							key={item.id}
