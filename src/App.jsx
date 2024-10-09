@@ -5,19 +5,16 @@ import List from './components/List.jsx'
 import { useState } from 'react'
 
 export default function App() {
-  const [items, setItems] = useState(
-		JSON.parse(localStorage.getItem('listItems')))
+	const fromLocalStorage = JSON.parse(localStorage.getItem('listItems'))
+	const [items, setItems] = useState(fromLocalStorage || [])
 	
-  
-  console.log(items);
 
 	const handleAddItems = (item) => {
 		setItems((items) => [...items, item])
-  }
-  
+	}
 
-  const handleDeleteItem = (id) => {
-    const confirmed = window.confirm(
+	const handleDeleteItem = (id) => {
+		const confirmed = window.confirm(
 			'Are you sure you want to delete this item?'
 		)
 
@@ -31,18 +28,15 @@ export default function App() {
 				item.id === id ? { ...item, inCart: !item.inCart } : item
 			)
 		)
-  }
+	}
 
-  function handleClearList() {
+	function handleClearList() {
 		const confirmed = window.confirm(
 			'Are you sure you want to delete all items?'
 		)
 
 		if (confirmed) setItems([])
-  }
-  
-  
-  
+	}
 
 	return (
 		<>
