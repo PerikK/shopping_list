@@ -36,7 +36,7 @@ export default function Form({ onAddItems }) {
 					))}
 				</select>
 				<input
-					className='bg-opacity-100 bg-slate-950 ml-1 p- text-l md:mx-4 md:text-2xl rounded-xl hover:bg-slate-700'
+					className='bg-opacity-100 bg-slate-950 ml-1 p-1 text-l md:mx-4 md:text-2xl rounded-xl hover:bg-slate-700'
 					type='text'
 					placeholder='Item...'
 					value={itemName}

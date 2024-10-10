@@ -24,7 +24,7 @@ export default function Stats({ items }) {
 
 	return (
 		<>
-			<div className='bg-slate-600 text-2xl p-3 mx-2 rounded-2xl shadow-lg shadow-indigo-500/50'>
+			<div className='bg-slate-600 text-2xl p-3 mx-2 my-6 rounded-2xl shadow-lg shadow-indigo-500/50'>
 				<em>
 					You have{' '}
 					<span className='font-bold text-yellow-300 '>
