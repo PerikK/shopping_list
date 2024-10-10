@@ -1,41 +1,13 @@
 export default function Item({ item, onDeleteItem, onToggleInCart }) {
-
 	return (
 		<>
-			{/* <li className={`size-fit bg-slate-700 border-2 p-3 rounded-lg hover:bg-slate-600 ${item.inCart ? 'bg-gray-800' : ''}`}>
-				<span
-					className={`text-lg md:text-2xl mr-4 ${
-						item.inCart
-							? 'line-through decoration-red-500 text-slate-500'
-							: ''
-					}`}
-				>
-					{item.qty}. {item.itemName}
-				</span>
-				<button
-					className='bg-slate-600 hover:text-xl p-2 rounded-lg'
-					onClick={() => onToggleInCart(item.id)}
-				>
-					In 🛒
-				</button>
-				<button
-					className='hover:text-xl mx-2'
-					onClick={() => onDeleteItem(item.id)}
-				>
-					❌
-				</button>
-			</li> */}
 			<li
-				className={`${
-					item.id % 2 === 0 ? 'text-left' : 'text-right'
-				} p-2`}
-				// className={`size-fit ${index % 2 === 0 ? 'text-left' : 'text-right'
-				// } bg-slate-700 border-2 p-3 rounded-lg hover:bg-slate-600 ${
-				// 	item.inCart ? 'bg-gray-800' : ''
-				// }`}
+				className={`m-2px text-l md:text-2xl grid grid-col-[1fr_80xp_40px] gap-3 size-fit w-full bg-slate-700 border-2 p-3 rounded-lg  ${
+					item.inCart ? 'bg-gray-800' : ''
+				}`}
 			>
 				<span
-					className={`text-lg md:text-2xl  mr-4 break-words max-w-xs ${
+					className={`text-lg md:text-2xl p-1 mr-4 break-words max-w-xs ${
 						item.inCart
 							? 'line-through decoration-red-500 text-slate-500'
 							: ''
@@ -44,13 +16,13 @@ export default function Item({ item, onDeleteItem, onToggleInCart }) {
 					{item.qty}. {item.itemName}
 				</span>
 				<button
-					className='bg-slate-600 hover:text-xl p-2 rounded-lg'
+					className='bg-slate-600 text-xl hover:text-2xl p-2 mx-2 rounded-lg hover:bg-slate-800'
 					onClick={() => onToggleInCart(item.id)}
 				>
 					In 🛒
 				</button>
 				<button
-					className='hover:text-xl mx-2'
+					className='hover:text-2xl  mx-auto size-fit'
 					onClick={() => onDeleteItem(item.id)}
 				>
 					❌

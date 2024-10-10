@@ -18,12 +18,14 @@ export default function Form({ onAddItems }) {
 
 	return (
 		<>
-			<form  onSubmit={handleSubmit}>
-				<h3 className='text-2xl p-2'>
+			<form 
+				className='mx-auto'
+				onSubmit={handleSubmit}>
+				<h3 className='text-l my-6 ml-14 md:text-2xl'>
 					What do you need to buy?
 				</h3>
 				<select
-					className='m-3 px-3 py-2  bg-opacity-100 bg-slate-900  rounded-xl p-2 hover:bg-slate-700'
+					className=' text-l bg-opacity-100 bg-slate-900 rounded-xl p-2 hover:bg-slate-700'
 					value={qty}
 					onChange={(e) => setQty(Number(e.target.value))}
 				>
@@ -34,7 +36,7 @@ export default function Form({ onAddItems }) {
 					))}
 				</select>
 				<input
-					className='ml-3 px-3 py-2  bg-opacity-100 bg-slate-950  rounded-xl p-2 hover:bg-slate-700'
+					className='bg-opacity-100 bg-slate-950 ml-1 p- text-l md:mx-4 md:text-2xl rounded-xl hover:bg-slate-700'
 					type='text'
 					placeholder='Item...'
 					value={itemName}

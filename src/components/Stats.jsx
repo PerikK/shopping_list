@@ -6,7 +6,7 @@ export default function Stats({ items }) {
 
 	if (!items.length) {
 		return (
-			<p className='bg-slate-600 text-2xl p-3 rounded-2xl shadow-lg shadow-indigo-500/50'>
+			<p className='bg-slate-600 text-2xl p-3 rounded-2xl mx-2 shadow-lg shadow-indigo-500/50'>
 				<em>🛒 Add some items to your shopping list</em>
 			</p>
 		)
@@ -24,7 +24,7 @@ export default function Stats({ items }) {
 
 	return (
 		<>
-			<div className='0'>
+			<div className='bg-slate-600 text-2xl p-3 mx-2 rounded-2xl shadow-lg shadow-indigo-500/50'>
 				<em>
 					You have{' '}
 					<span className='font-bold text-yellow-300 '>
@@ -34,7 +34,7 @@ export default function Stats({ items }) {
 					<span className='font-bold text-yellow-300 mx-1'>
 						{itemsInCart}
 					</span>{' '}
-					items in your cart
+					items in your cart 🛒
 				</em>
 			</div>
 		</>
