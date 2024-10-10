@@ -24,7 +24,7 @@ export default function Stats({ items }) {
 
 	return (
 		<>
-			<footer className='bg-slate-600 text-2xl p-3 rounded-2xl shadow-lg shadow-indigo-500/50'>
+			<div className='0'>
 				<em>
 					You have{' '}
 					<span className='font-bold text-yellow-300 '>
@@ -36,7 +36,7 @@ export default function Stats({ items }) {
 					</span>{' '}
 					items in your cart
 				</em>
-			</footer>
+			</div>
 		</>
 	)
 }

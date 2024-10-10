@@ -8,8 +8,7 @@ export default function List({
 	onToggleInCart,
 	onClearList,
 }) {
-    const [sortBy, setSortBy] = useState('input')
-    
+	const [sortBy, setSortBy] = useState('input')
 
 	let sortedItems = []
 
@@ -26,14 +25,15 @@ export default function List({
 		sortedItems = items
 			.filter((item) => !item.inCart)
 			.concat(items.filter((item) => item.inCart))
-    }
-    localStorage.setItem('listItems', JSON.stringify(items))  
-    
+	}
+	localStorage.setItem('listItems', JSON.stringify(items))
+
+	//grid xs:grid-cols-1 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 min-h-60 gap-2 overflow-y-auto w-full mx-8
 
 	return (
 		<>
 			<div>
-				<ul className='grid xs:grid-cols-1 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 min-h-60 gap-2 overflow-y-auto w-full mx-8'>
+				<ul className='flex flex-col gap-3 md:grid md:grid-cols-3 md:gap-9'>
 					{sortedItems?.map((item) => (
 						<Item
 							key={item.id}
@@ -49,7 +49,7 @@ export default function List({
 				<select
 					value={sortBy}
 					onChange={(e) => setSortBy(e.target.value)}
-					className='text-2xl bg-slate-900  rounded-xl p-2 hover:bg-slate-700 hover:text-xl'
+					className='text-1xl m-2 bg-slate-900 shadow-md  rounded-xl p-2 hover:bg-slate-700 hover:text-xl'
 				>
 					<option value='input'>Sort by input order</option>
 					<option value='name'>Sort by name</option>
@@ -57,7 +57,7 @@ export default function List({
 				</select>
 				<button
 					onClick={onClearList}
-					className='text-2xl bg-slate-900  rounded-xl p-2 hover:bg-slate-700 hover:text-xl'
+					className='text-1xl m-2 bg-slate-900 shadow-md  rounded-xl p-2 hover:bg-slate-700 hover:text-xl'
 				>
 					Clear list
 				</button>
